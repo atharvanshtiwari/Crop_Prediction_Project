@@ -7,9 +7,6 @@ from streamlit_lottie import st_lottie
 import plotly.express as px
 from google import genai
 
-# --- DEVELOPER API CONFIGURATION ---
-# Securely fetching the API key from your .streamlit/secrets.toml file!
-# Ensure your secrets.toml has this exact line: GEMINI_API_KEY = "your_actual_key"
 API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # 1. Page Configuration
