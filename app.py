@@ -10,7 +10,7 @@ from google import genai
 API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # 1. Page Configuration
-st.set_page_config(page_title="AI Crop Predictor", page_icon="🌱", layout="wide")
+st.set_page_config(page_title="Aritificial Intelligence Crop Predictor", page_icon="🌱", layout="wide")
 
 # 2. Helper Function to load Lottie Animations from a URL
 def load_lottieurl(url: str):
