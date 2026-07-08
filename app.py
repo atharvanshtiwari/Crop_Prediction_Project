@@ -28,7 +28,7 @@ def load_model():
 try:
     model = load_model()
 except FileNotFoundError:
-    st.error("⚠️ Model not found! Please run `model_training.py` first to generate `crop_model.pkl`.")
+    st.error("Model not found! Please run `model_training.py` first to generate `crop_model.pkl`.")
     st.stop()
 
 # --- MAIN UI: Header & Animation ---
@@ -47,7 +47,7 @@ with col2:
     if lottie_plant:
         st_lottie(lottie_plant, height=150, key="plant_anim")
 
-# --- USER INPUT SECTION ---
+# USER INPUT SECTION
 st.markdown("### 📊 Enter Your Farm Data")
 input_col1, input_col2, input_col3 = st.columns(3)
 
@@ -64,7 +64,7 @@ with input_col3:
     ph = st.number_input("Soil pH", min_value=0.0, max_value=14.0, value=6.5)
     rainfall = st.number_input("Rainfall (mm)", min_value=0.0, max_value=300.0, value=202.9)
 
-# --- PREDICTION & AI BOT SECTION ---
+#PREDICTION & AI BOT SECTION
 if st.button("🔮 Predict Best Crop", use_container_width=True):
     
     # Package the user's inputs
@@ -82,7 +82,7 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
     
     top_5_crops = prob_df.sort_values(by='Probability', ascending=False).head(5)
     
-    # --- DISPLAY RESULTS ---
+    # DISPLAY RESULTS
     st.markdown("---")
     st.success(f"### 🏆 The Model Predicts: **{prediction.capitalize()}**")
     
@@ -114,7 +114,7 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
                 Write a highly encouraging, professional 3-4 line note to the farmer explaining what to expect with this crop and giving one quick, specific farming tip based on their exact metrics. Do not use markdown formatting.
                 """
                 
-                # Fetch response from AI using the new client format
+                # Fetch response from AI using the client format
                 response = client.models.generate_content(
                     model='gemini-2.5-flash',
                     contents=prompt
