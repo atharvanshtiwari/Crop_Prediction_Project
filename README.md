@@ -4,7 +4,7 @@ An end-to-end, AI-powered agricultural advisory application designed to provide 
 
 ## 🚀 Live Demo
 
-URL: 
+URL: https://crop-prediction-crenv2qee8yoyejwzf5rjg.streamlit.app/
 
 ## 📝 Project Overview
 This project leverages Machine Learning and Generative AI to bridge the gap between complex soil data and actionable agricultural advice. Instead of just predicting a crop, the system provides personalized, context-aware expert notes to help farmers maximize their yields.
