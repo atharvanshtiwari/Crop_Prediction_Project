@@ -111,7 +111,7 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
                 You are an expert agricultural advisor. A farmer's soil has the following metrics: 
                 Nitrogen: {N}, Phosphorus: {P}, Potassium: {K}, Temp: {temp}°C, Humidity: {humidity}%, pH: {ph}, Rainfall: {rainfall}mm. 
                 Our Machine Learning model has predicted that '{prediction}' is the best crop to grow. 
-                Write a highly encouraging, professional 3-4 line note to the farmer explaining what to expect with this crop and giving one quick, specific farming tip based on their exact metrics. Do not use markdown formatting.
+                Write a highly encouraging, professional 3-4 line note to the farmer explaining what to expect with this crop and giving one quick, specific farming tip based on their exact metrics. Do not use markdown formatting. After writing those 3-4 line of note, leave 1-2 lines of space and then translate the same english sentence in Hindi
                 """
                 
                 # Fetch response from AI using the client format
