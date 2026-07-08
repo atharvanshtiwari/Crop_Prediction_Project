@@ -48,7 +48,7 @@ with col2:
         st_lottie(lottie_plant, height=150, key="plant_anim")
 
 # USER INPUT SECTION
-st.markdown("### 📊 Enter Your Farm Data")
+st.markdown("### Enter Your Farm Data")
 input_col1, input_col2, input_col3 = st.columns(3)
 
 with input_col1:
@@ -65,7 +65,7 @@ with input_col3:
     rainfall = st.number_input("Rainfall (mm)", min_value=0.0, max_value=300.0, value=202.9)
 
 #PREDICTION & AI BOT SECTION
-if st.button("🔮 Predict Best Crop", use_container_width=True):
+if st.button("Predict Best Crop", use_container_width=True):
     
     # Package the user's inputs
     features = np.array([[N, P, K, temp, humidity, ph, rainfall]])
@@ -84,7 +84,7 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
     
     # DISPLAY RESULTS
     st.markdown("---")
-    st.success(f"### 🏆 The Model Predicts: **{prediction.capitalize()}**")
+    st.success(f"### The Model Predicts: **{prediction.capitalize()}**")
     
     res_col1, res_col2 = st.columns(2)
     
