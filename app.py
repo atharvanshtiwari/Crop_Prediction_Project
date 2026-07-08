@@ -115,17 +115,10 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
                 """
                 
                 # Fetch response from AI using the client format
-                try:
-                    response = client.models.generate_content(
-                    model='gemini-2.5-flash',
-                    contents=promp
-                    )    
-                except Exception as e:
-                    if "429" in str(e):
-                        st.warning("The AI is currently busy due to high traffic. Please wait a moment and try again!")
-                    else:
-                        st.error("An error occurred. Please try again later.")
-                
+                response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=promp
+                )    
                 st.info(response.text)
                 
             except Exception as e:
