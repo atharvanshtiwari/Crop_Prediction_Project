@@ -1,0 +1,15 @@
+# Streamlit secrets (CRITICAL: Never push API keys or passwords)
+.streamlit/secrets.toml
+.streamlit/
+
+# Python environment and cache
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
