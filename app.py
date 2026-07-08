@@ -116,9 +116,10 @@ if st.button("🔮 Predict Best Crop", use_container_width=True):
                 
                 # Fetch response from AI using the client format
                 response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=promp
-                )    
+                    model='gemini-2.5-flash',
+                    contents=prompt
+                )
+                
                 st.info(response.text)
                 
             except Exception as e:
