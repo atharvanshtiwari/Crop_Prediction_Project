@@ -11,7 +11,7 @@ print("Starting the Machine Learning training process...")
 # We look for the file inside the 'data' folder as per our project structure
 file_path = 'data/Crop_recommendation.csv'
 
-# (A quick safety check just in case you saved it in the main folder instead)
+# A quick safety check just in case saved it in the main folder instead)
 if not os.path.exists(file_path):
     file_path = 'Crop_recommendation.csv'
 
@@ -30,7 +30,6 @@ y = crop_data['label']
 
 # 3. Split the Data
 # We hide 20% of the data (test_size=0.2) so we can test the model fairly later.
-# random_state=42 just ensures the split is the same every time you run it.
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 4. Create and Train the Model
@@ -47,11 +46,9 @@ predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f"Training Complete! The model's accuracy score is: {accuracy * 100:.2f}%")
 
-# 6. Save the Model (The most crucial step for web development!)
-# 'wb' stands for "write binary". We are freezing the trained model into a file.
+# 6. Save the Model (The most crucial step for web development)
 model_filename = 'crop_model.pkl'
 with open(model_filename, 'wb') as file:
     pickle.dump(model, file)
 
 print(f"Success! The trained model's 'brain' has been saved as '{model_filename}'")
-print("You are now ready to build the front-end web application!")
